@@ -1,7 +1,8 @@
-body {
+ body {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: stretch;
+    justify-content: space-around;
+    align-items: stretch;
     min-height: 100vh;
     max-height: 100vh;
     margin: 0;
@@ -16,19 +17,38 @@ header {
 main {
     background-color: #b7e4c7;
     flex: 8;
-}
-
-main .container {
-    margin-top: 20px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    aspect-ratio: 1 / 1;
+    flex-wrap: row wrap;
     display: flex;
-    border: 1px solid black;
+    justify-content: space-between;
+    align-items: stretch;
+    border: 1px solid;
 }
 
+.container {
+    flex: 1;
+    justify-content: space-between;
+}
+.grid {
+    position:relative;
+    max-width: 500px;
+    border: 1px solid;
+    margin: 5px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+.grid::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+} 
+
+.gridContent {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+}
 footer {
     background-color: #1b4332;
     flex: 1;
