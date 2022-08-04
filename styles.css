@@ -16,40 +16,38 @@ header {
 
 main {
     background-color: #b7e4c7;
-    flex: 8;
-    flex-wrap: row wrap;
+    flex: 3;
+    border: 1px solid red;
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    border: 1px solid;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 12px;
+    align-items: center;
 }
 
-.container {
-    flex: 1;
-    justify-content: space-between;
-}
 .grid {
-    position:relative;
-    max-width: 500px;
-    border: 1px solid;
-    margin: 5px;
-    border: 1px solid;
-    box-sizing: border-box;
-}
-
-.grid::before {
-    content: '';
-    display: block;
-    padding-top: 100%;
-} 
-
-.gridContent {
-    position: absolute;
-    top: 0; left: 0;
-    height: 100%;
-    width: 100%;
+    border: solid 1px;
+    height: 500px;
+    width: 500px;
 }
 footer {
     background-color: #1b4332;
     flex: 1;
+}
+
+@media (max-width: 520px) {
+    .grid {
+        border: solid 1px;
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 420px) {
+    .grid {
+        border: solid 1px;
+        height: 300px;
+        width: 300px;
+    }
+}
 }
