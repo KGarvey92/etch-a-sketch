@@ -3,6 +3,7 @@ body {
     flex-flow: column nowrap;
     justify-content: stretch;
     min-height: 100vh;
+    max-height: 100vh;
     margin: 0;
     font-family: Helvetica, sans-serif;
 }
@@ -14,7 +15,18 @@ header {
 
 main {
     background-color: #b7e4c7;
-    flex: 10;
+    flex: 8;
+}
+
+main .container {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    border: 1px solid black;
 }
 
 footer {
