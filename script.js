@@ -6,6 +6,10 @@ const grid = document.querySelector('.grid')
 createGrid(16);
 
 function createGrid(gridSize) {
+    // apply inline style to grid element to alter grid size
+    grid.setAttribute('style', `grid-template-columns: repeat(${gridSize}, 1fr); 
+    grid-template-rows: repeat(${gridSize}, 1fr);`);
+    // fill grid with new squares
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
             grid.appendChild(gridSquare.cloneNode(true));

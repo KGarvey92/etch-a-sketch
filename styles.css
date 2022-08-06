@@ -35,9 +35,15 @@ main {
 }
 
 .grid-item {
-    background-color: aqua;
-    border: solid 1px red;
+    background-color: grey;
 }
+
+.grid-item:hover {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;  
+}
+
 footer {
     background-color: #1b4332;
     flex: 1;
