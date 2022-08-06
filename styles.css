@@ -17,7 +17,6 @@ header {
 main {
     background-color: #b7e4c7;
     flex: 3;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
@@ -26,7 +25,6 @@ main {
 }
 
 .grid {
-    border: solid 1px;
     height: 500px;
     width: 500px;
     display: grid;
