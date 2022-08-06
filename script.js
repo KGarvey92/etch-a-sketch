@@ -7,8 +7,8 @@ createGrid(16);
 prepareTrail();
 
 document.querySelector("#colorPicker").onchange = e => {
-    console.log(e.target.value);
-    
+    let color = e.target.value;
+    document.documentElement.style.setProperty('--trail-color', color);
  }
 
 function createGrid(gridSize) {

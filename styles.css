@@ -1,3 +1,7 @@
+ :root {
+    --trail-color: #1b4332;
+ }
+ 
  body {
     display: flex;
     flex-flow: column nowrap;
@@ -83,8 +87,9 @@ main {
 }
 
 .trail {
-    background-color: #1b4332;
+    background-color: var(--trail-color);
 }
+
 @media (max-width: 612px), (max-height: 830px) {
     .grid {
         height: 500px;
