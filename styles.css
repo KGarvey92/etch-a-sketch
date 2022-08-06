@@ -66,6 +66,9 @@ main {
     font-family: 'Mouse Memoirs', sans-serif;
 }
 
+.trail {
+    background-color: #1b4332;
+}
 @media (max-width: 612px), (max-height: 830px) {
     .grid {
         height: 500px;

@@ -21,7 +21,7 @@ function destroyGrid() {
     document.querySelectorAll('.grid-item').forEach(e => e.remove());
 }
 
-// add event listener on button
+// add functionality to grid size button
 const gridBtn = document.querySelector('.gridBtn');
 gridBtn.addEventListener('click', () => {
     // remove previous grid
@@ -36,4 +36,9 @@ gridBtn.addEventListener('click', () => {
 
     // rerun createGrid function
      createGrid(input);
-})
+});
+
+// add event listener to grid squares to implement trail
+document.querySelectorAll('.grid-item').forEach(item => item.addEventListener('mouseover', () => {
+    item.classList.add('trail');
+}));
