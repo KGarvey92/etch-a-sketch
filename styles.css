@@ -51,19 +51,35 @@ main {
     background-color: #52B788;
 }
 
-.grid-item:hover, .gridBtn:hover {
+.grid-item:hover, .gridBtn:hover, #colorPicker:hover {
     transform: scale(1.1);
     border: 1px solid #1b4332;
     box-shadow: 0 0 1rem #1b4332;  
 }
 
-.gridBtn {
+.gridBtn, #colorPicker {
     background-color: #52B788;
     border: none;
     border-radius: 5%;
+}
+
+.gridBtn {
     padding: 15px 32px;
     font-size: 32px;
     font-family: 'Mouse Memoirs', sans-serif;
+}
+
+#colorLabel {
+    font-size: 28px;
+    font-family: 'Mouse Memoirs', sans-serif;
+
+}
+.btns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
 }
 
 .trail {

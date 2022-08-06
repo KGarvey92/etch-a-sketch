@@ -4,6 +4,12 @@ const gridSquare = document.createElement('div');
 gridSquare.classList.add('grid-item');
 const grid = document.querySelector('.grid')
 createGrid(16);
+prepareTrail();
+
+document.querySelector("#colorPicker").onchange = e => {
+    console.log(e.target.value);
+    
+ }
 
 function createGrid(gridSize) {
     // apply inline style to grid element to alter grid size
@@ -35,10 +41,14 @@ gridBtn.addEventListener('click', () => {
 
 
     // rerun createGrid function
-     createGrid(input);
+    createGrid(input);
+    prepareTrail();
 });
 
-// add event listener to grid squares to implement trail
-document.querySelectorAll('.grid-item').forEach(item => item.addEventListener('mouseover', () => {
-    item.classList.add('trail');
-}));
+// add function to prepare trail when grid is created
+function prepareTrail() {
+    // add event listener to grid squares to implement trail on mouseover
+    document.querySelectorAll('.grid-item').forEach(item => item.addEventListener('mouseover', () => {
+        item.classList.add('trail');
+    }))}
+
