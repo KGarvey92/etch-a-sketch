@@ -37,9 +37,6 @@ gridBtn.addEventListener('click', () => {
     while (input < 1 || input > 100) {
         input = parseInt(prompt('Enter a number between 1-100'));
     }
-    // change cssGrid according to input
-
-
     // rerun createGrid function
     createGrid(input);
     prepareTrail();
