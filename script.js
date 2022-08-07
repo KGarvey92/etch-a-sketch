@@ -7,8 +7,12 @@ createGrid(16);
 colorTrail();
 
 document.querySelector("#colorPicker").onchange = e => {
+    let currentSize = Math.sqrt(document.querySelectorAll('.grid-item').length);
+    destroyGrid();
+    createGrid(currentSize);
     let color = e.target.value;
     document.documentElement.style.setProperty('--trail-color', color);
+    colorTrail();
  }
 
 function createGrid(gridSize) {
@@ -57,6 +61,7 @@ function randomTrail() {
         const b = Math.floor(Math.random() * 255);
         item.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;}))
     }
+
 // add functionality to random button
 const randBtn = document.querySelector('.randBtn');
 randBtn.addEventListener('click', () => {
