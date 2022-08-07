@@ -4,7 +4,7 @@ const gridSquare = document.createElement('div');
 gridSquare.classList.add('grid-item');
 const grid = document.querySelector('.grid')
 createGrid(16);
-prepareTrail();
+colorTrail();
 
 document.querySelector("#colorPicker").onchange = e => {
     let color = e.target.value;
@@ -39,13 +39,31 @@ gridBtn.addEventListener('click', () => {
     }
     // rerun createGrid function
     createGrid(input);
-    prepareTrail();
+    colorTrail();
 });
 
 // add function to prepare trail when grid is created
-function prepareTrail() {
+function colorTrail() {
     // add event listener to grid squares to implement trail on mouseover
     document.querySelectorAll('.grid-item').forEach(item => item.addEventListener('mouseover', () => {
         item.classList.add('trail');
     }))}
 
+function randomTrail() {
+    // add event listener to grid squares to implement random colours on mouseover
+    document.querySelectorAll('.grid-item').forEach(item => item.addEventListener('mouseover', () => {
+        const r = Math.floor(Math.random() * 255);
+        const g = Math.floor(Math.random() * 255);
+        const b = Math.floor(Math.random() * 255);
+        item.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;}))
+    }
+// add functionality to random button
+const randBtn = document.querySelector('.randBtn');
+randBtn.addEventListener('click', () => {
+        //destroy and replace current grid
+        let currentSize = Math.sqrt(document.querySelectorAll('.grid-item').length);
+        destroyGrid();
+        createGrid(currentSize);
+        //call randomTrail function
+        randomTrail();
+})
